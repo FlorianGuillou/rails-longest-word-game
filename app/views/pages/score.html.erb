@@ -1,0 +1,12 @@
+<h1>RESULT</h1>
+
+<%if @english_word == false %>
+  <p>Sorry <%=@word%> is not an english word</p>
+<%elsif @included == false %>
+  <p>Sorry <%=@word%> can't be build</p>
+<%else @included && @english_word %>
+  <p>Congrats you get <%=@score.round %> for <strong><%=@word%></strong></p>
+<%end%>
+
+
+<a href="/new">Play again</a>
